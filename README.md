@@ -4,7 +4,7 @@
 
 ## Summary
 
-> This repository is the ReactJS Web App for the RACV interview Code Challenge. It is only intended for this purpose and will be deleted straight away.
+> This repository is the ReactJS Web App Part for the RACV interview Code Challenge. It is only intended for this purpose and will be deleted straight after.
 
 ## Features
 
