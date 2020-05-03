@@ -6,9 +6,18 @@
 
 > This repository is the ReactJS Web App Part for the RACV interview Code Challenge. It is only intended for this purpose and will be deleted straight after.
 
+Few Suburbs could be used as a demo of this system:
+
+- Point Cook
+- Box Hill
+- Glen Waverley
+- Templestowe
+- Templestowe Lower
+
 ## Features
 
 - Based on Ant Design Component Library
+- Auto completion debouncing
 
 ## Clone
 
