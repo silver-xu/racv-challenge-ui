@@ -1,0 +1,17 @@
+.listing-card {
+  margin: 16px 0;
+
+  img {
+    width: 100%;
+  }
+
+  .ant-card-body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ant-card-body::before,
+  .ant-card-body::after {
+    content: normal;
+  }
+}

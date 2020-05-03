@@ -1,0 +1,15 @@
+@import "../colors.scss";
+
+.content {
+  margin: 0 50px;
+}
+
+.layout-components {
+  margin: 16px auto;
+  max-width: 1000px;
+}
+
+.site-layout-content {
+  background: $white;
+  padding: 24px;
+}
