@@ -4,7 +4,7 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import { HashRouter as Router } from "react-router-dom";
 import "antd/dist/antd.css";
 
-import { Layout } from "../Layout";
+import { Layout } from "./Layout";
 import { config } from "../../configs";
 import "./App.tsx.scss";
 

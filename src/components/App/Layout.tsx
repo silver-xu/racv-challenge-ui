@@ -2,11 +2,11 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Layout as AntdLayout } from "antd";
 
-import { Nav } from "./Nav/Nav";
-import { Breadcrumb } from "./Nav/Breadcrumb";
-import { SearchContent } from "./Search/SearchContent";
-import { FavouriteContextProvider } from "../contexts/FavouriteContextProvider";
-import { FavouritesContent } from "./Favourites/FavouritesContent";
+import { Nav } from "../Nav/Nav";
+import { Breadcrumb } from "../Nav/Breadcrumb";
+import { SearchContent } from "../Search/SearchContent";
+import { FavouriteContextProvider } from "../../contexts/FavouriteContextProvider";
+import { FavouritesContent } from "../Favourites/FavouritesContent";
 
 const { Content, Footer } = AntdLayout;
 

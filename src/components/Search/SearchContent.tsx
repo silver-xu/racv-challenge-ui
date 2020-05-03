@@ -33,7 +33,6 @@ export const SearchContent = ({ defaultSuburb }: SearchContentProps) => {
             {response.data.getListings.map((listing) => (
               <ListingCard key={listing.id} listing={listing} />
             ))}
-            }
           </>
         ) : (
           <Empty
