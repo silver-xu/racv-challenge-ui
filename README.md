@@ -1,4 +1,4 @@
-# RACV Code Challenge [![Build Status](https://travis-ci.org/silver-xu/racv-challenge-ui.svg?branch=master)](https://travis-ci.org/silver-xu/racv-challenge-ui)
+# RACV Code Challenge [![Build Status](https://travis-ci.org/silver-xu/racv-challenge-ui.svg?branch=master)](https://travis-ci.org/silver-xu/racv-challenge-ui) [![Known Vulnerabilities](https://snyk.io/test/github/silver-xu/racv-challenge-api/badge.svg?targetFile=package.json)](https://snyk.io/test/github/silver-xu/racv-challenge-ui?targetFile=package.json)
 
 > ReactJS Web App for the RACV Code Challenge.
 
