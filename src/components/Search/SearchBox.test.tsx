@@ -10,14 +10,14 @@ describe("SearchBox tests", () => {
 
   const mockListing = {
     id: 1,
-    address: "foo",
-    suburb: "barSuburb",
-    subtitle: "foobar",
-    image: "foo image",
+    address: "mockAddress",
+    suburb: "mockSuburb",
+    subtitle: "mockSubtitle",
+    image: "mockImage",
   };
 
   const mockListingSearchResult = {
-    suburb: "barSuburb",
+    suburb: "mockSuburb",
     listings: [mockListing],
   };
 
@@ -27,7 +27,7 @@ describe("SearchBox tests", () => {
         request: {
           query: searchListingsQuery,
           variables: {
-            keyword: "bar",
+            keyword: "mock",
           },
         },
         result: {
@@ -44,11 +44,11 @@ describe("SearchBox tests", () => {
       </MockedProvider>
     );
 
-    fireEvent.change(getByTestId("searchBox"), { target: { value: "bar" } });
+    fireEvent.change(getByTestId("searchBox"), { target: { value: "mock" } });
 
     // debouncing causes this
     await wait(100);
 
-    expect(getAllByText(/barSuburb/).length).toBeGreaterThan(0);
+    expect(getAllByText(/mockSuburb/).length).toBeGreaterThan(0);
   });
 });

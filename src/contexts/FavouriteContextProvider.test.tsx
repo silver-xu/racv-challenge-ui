@@ -12,10 +12,10 @@ describe("FavouriteContextProvider tests", () => {
 
   const mockListing: Listing = {
     id: 1,
-    address: "foo",
-    suburb: "bar",
-    subtitle: "foobar",
-    image: "foo image",
+    address: "mockAddress",
+    suburb: "mockSuburb",
+    subtitle: "mockSubtitle",
+    image: "mockImage",
   };
 
   const mockedStorage = storage as jest.Mocked<typeof storage>;

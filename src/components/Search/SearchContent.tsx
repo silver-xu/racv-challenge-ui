@@ -25,7 +25,7 @@ export const SearchContent = ({ defaultSuburb }: SearchContentProps) => {
     <div className="site-layout-content layout-components">
       <SearchBox setSuburb={setSuburb} />
       <div className="results" data-testid="results">
-        {response?.data ? (
+        {response?.data && response?.data.getListings.length > 0 ? (
           <>
             <h2>
               {response.data.getListings.length} Property listings in {suburb}

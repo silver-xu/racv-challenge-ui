@@ -11,10 +11,10 @@ describe("FavouritesContent tests", () => {
     favourites: [
       {
         id: 1,
-        address: "foo",
-        suburb: "bar",
-        subtitle: "foobar",
-        image: "foo image",
+        address: "mockAddress",
+        suburb: "mockSuburb",
+        subtitle: "mockSubtitle",
+        image: "mockImage",
       },
     ],
     add: jest.fn(),
@@ -28,9 +28,9 @@ describe("FavouritesContent tests", () => {
       </FavouriteContext.Provider>
     );
 
-    expect(getByTestId("favourites")).toContainHTML("foo");
-    expect(getByTestId("favourites")).toContainHTML("foobar");
-    expect(getByTestId("favourites")).toContainHTML("foo image");
+    expect(getByTestId("favourites")).toContainHTML("mockAddress");
+    expect(getByTestId("favourites")).toContainHTML("mockSubtitle");
+    expect(getByTestId("favourites")).toContainHTML("mockImage");
     expect(getByTestId("favourites")).not.toContainHTML(
       "No listing has been marked as favourite"
     );
@@ -45,9 +45,9 @@ describe("FavouritesContent tests", () => {
       </FavouriteContext.Provider>
     );
 
-    expect(getByTestId("favourites")).not.toContainHTML("foo");
-    expect(getByTestId("favourites")).not.toContainHTML("foobar");
-    expect(getByTestId("favourites")).not.toContainHTML("foo image");
+    expect(getByTestId("favourites")).not.toContainHTML("mockAddress");
+    expect(getByTestId("favourites")).not.toContainHTML("mockSubtitle");
+    expect(getByTestId("favourites")).not.toContainHTML("mockImage");
     expect(getByTestId("favourites")).toContainHTML(
       "No listing has been marked as favourite"
     );

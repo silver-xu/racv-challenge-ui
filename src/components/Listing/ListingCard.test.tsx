@@ -14,10 +14,10 @@ describe("ListingCard tests", () => {
 
   const mockListing = {
     id: 1,
-    address: "foo",
-    suburb: "bar",
-    subtitle: "foobar",
-    image: "foo image",
+    address: "mockAddress",
+    suburb: "mockSuburb",
+    subtitle: "mockSubtitle",
+    image: "mockImage",
   };
 
   it("should render listing details", () => {
@@ -27,9 +27,9 @@ describe("ListingCard tests", () => {
       </FavouriteContext.Provider>
     );
 
-    expect(getByTestId("1")).toContainHTML("foo");
-    expect(getByTestId("1")).toContainHTML("foobar");
-    expect(getByTestId("1")).toContainHTML("foo image");
+    expect(getByTestId("1")).toContainHTML("mockAddress");
+    expect(getByTestId("1")).toContainHTML("mockSubtitle");
+    expect(getByTestId("1")).toContainHTML("mockImage");
   });
 
   it("should call add / remove in context upon clicking fav button", () => {

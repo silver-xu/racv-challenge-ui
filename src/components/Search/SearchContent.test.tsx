@@ -10,10 +10,10 @@ describe("SearchContent tests", () => {
 
   const mockListing = {
     id: 1,
-    address: "foo",
-    suburb: "bar",
-    subtitle: "foobar",
-    image: "foo image",
+    address: "mockAddress",
+    suburb: "mockSuburb",
+    subtitle: "mockSubtitle",
+    image: "mockImage",
   };
 
   it("should render listing details if GraphQL server is returning valid response", async () => {
@@ -22,7 +22,7 @@ describe("SearchContent tests", () => {
         request: {
           query: getListingsQuery,
           variables: {
-            suburb: "bar",
+            suburb: "mockSuburb",
           },
         },
         result: {
@@ -35,15 +35,15 @@ describe("SearchContent tests", () => {
 
     const { getByTestId } = render(
       <MockedProvider mocks={mocks} addTypename={false}>
-        <SearchContent defaultSuburb="bar" />
+        <SearchContent defaultSuburb="mockSuburb" />
       </MockedProvider>
     );
 
     await wait(0);
 
-    expect(getByTestId("results")).toContainHTML("foo");
-    expect(getByTestId("results")).toContainHTML("foobar");
-    expect(getByTestId("results")).toContainHTML("foo image");
+    expect(getByTestId("results")).toContainHTML("mockAddress");
+    expect(getByTestId("results")).toContainHTML("mockSubtitle");
+    expect(getByTestId("results")).toContainHTML("mockImage");
     expect(getByTestId("results")).not.toContainHTML("empty");
   });
 
@@ -53,7 +53,7 @@ describe("SearchContent tests", () => {
         request: {
           query: getListingsQuery,
           variables: {
-            suburb: "bar",
+            suburb: "mockSuburb",
           },
         },
         result: {
@@ -66,15 +66,15 @@ describe("SearchContent tests", () => {
 
     const { getByTestId } = render(
       <MockedProvider mocks={emptyMocks} addTypename={false}>
-        <SearchContent defaultSuburb="bar" />
+        <SearchContent defaultSuburb="mockSuburb" />
       </MockedProvider>
     );
 
     await wait(0);
 
-    expect(getByTestId("results")).not.toContainHTML("foo");
-    expect(getByTestId("results")).not.toContainHTML("foobar");
-    expect(getByTestId("results")).not.toContainHTML("foo image");
-    expect(getByTestId("results")).not.toContainHTML("empty");
+    expect(getByTestId("results")).not.toContainHTML("mockAddress");
+    expect(getByTestId("results")).not.toContainHTML("mockSubtitle");
+    expect(getByTestId("results")).not.toContainHTML("mockImage");
+    expect(getByTestId("results")).toContainHTML("empty");
   });
 });
