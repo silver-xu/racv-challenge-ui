@@ -4,7 +4,6 @@ import { MockedProvider } from "@apollo/react-testing";
 import { SearchContent } from "./SearchContent";
 import { wait } from "../../utils/wait";
 import { searchListingsQuery } from "../../queries/searchListingsQuery";
-import { getListingsQuery } from "../../queries/getListingsQuery";
 
 describe("SearchBox tests", () => {
   afterEach(cleanup);
@@ -46,7 +45,9 @@ describe("SearchBox tests", () => {
     );
 
     fireEvent.change(getByTestId("searchBox"), { target: { value: "bar" } });
-    await wait(0);
+
+    // debouncing causes this
+    await wait(100);
 
     expect(getAllByText(/barSuburb/).length).toBeGreaterThan(0);
   });

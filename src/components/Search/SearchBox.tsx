@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Input, AutoComplete } from "antd";
-
-import "./SearchBox.tsx.scss";
 import { useQuery } from "@apollo/react-hooks";
+import debounce from "lodash.debounce";
+
 import { searchListingsQuery } from "../../queries/searchListingsQuery";
 import { SearchListingsResponse } from "../../types/SearchListingsResponse";
+import "./SearchBox.tsx.scss";
 
 const getSearchResultOptions = (
   searchListingResponse: SearchListingsResponse
@@ -43,8 +44,12 @@ export const SearchBox = (props: SearchBoxProps) => {
     setOptions(response?.data ? getSearchResultOptions(response.data) : []);
   }, [response]);
 
-  const handleSearch = (keyword: string) => {
+  const debouncedSearch = debounce((keyword) => {
     setKeyword(keyword);
+  });
+
+  const handleSearch = (keyword: string) => {
+    debouncedSearch(keyword);
   };
 
   const handleSelectOption = (suburb: string) => {
