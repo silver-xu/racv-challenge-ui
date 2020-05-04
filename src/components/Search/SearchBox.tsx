@@ -44,9 +44,7 @@ export const SearchBox = (props: SearchBoxProps) => {
     setOptions(response?.data ? getSearchResultOptions(response.data) : []);
   }, [response]);
 
-  const debouncedSearch = debounce((keyword) => {
-    setKeyword(keyword);
-  });
+  const debouncedSearch = debounce((keyword) => setKeyword(keyword), 50);
 
   const handleSearch = (keyword: string) => {
     debouncedSearch(keyword);
