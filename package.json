@@ -5,7 +5,7 @@
   "dependencies": {
     "@apollo/react-hooks": "^3.1.5",
     "@types/lodash.debounce": "^4.0.6",
-    "antd": "^4.2.0",
+    "antd": "^4.21.6",
     "apollo-boost": "^0.4.7",
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.6.4",
